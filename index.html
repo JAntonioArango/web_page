@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogues</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    body {background-color: #cccccc}
+    h1 {color: aqua}
+    p {color: darkcyan}
+  </style>
+
+</head>
+
+<body>
+
+<button id="themeToggle" class="theme-toggle">Dark/Light Mode</button>
+<script>
+  const themeToggleButton = document.getElementById("themeToggle");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      themeToggleButton.textContent = "Dark/Light Mode";
+    }
+  });
+
+  themeToggleButton.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+    themeToggleButton.textContent = isDarkMode ? "Dark/Light Mode" : "Dark/Light Mode";
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  });
+</script>
+
+<p class="important">Welcome to Antonio's Bearings Catalogues</p>
+
+  <script src="js/app.js"></script>
+
+  <nav class="head nav bar">
+    <a href="index.html" class="head bar item">Home</a>
+    <a href="catalogues.html" class="head bar item">Catalogues</a>
+    <a href="contact.html" class="head bar item">Contact</a>
+  </nav>
+  <section>
+    <img class="bearingimages" src="Bearing1.jpg" style="width:auto">
+    <img class="bearingimages" src="Bearing2.jpg" style="width:auto">
+    <img class="bearingimages" src="Bearing3.jpg" style="width:auto">
+  </section>
+
+ <script>
+   var myIndex = 0;
+   carousel();
+
+   function carousel() {
+     var i;
+     var x =
+       document.getElementsByClassName("bearingimages");
+
+     for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+     }
+     myIndex++;
+     if (myIndex > x.length) {myIndex = 1}
+     x[myIndex-1].style.display = "block";
+     setTimeout(carousel, 2000);
+   }
+ </script>
+
+
+<footer class="footer container">
+  <p class="medium">
+    Powered by <a href="www.mycatalogues.com" target="_blank">Antonio's</a>
+  </p>
+</footer>
+
+</body>
+
+</html>

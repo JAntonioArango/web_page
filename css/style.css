@@ -1,0 +1,185 @@
+
+p {
+  font-family: 'Arial', sans-serif; /* Clean, professional font */
+  font-size: 25px; /* Comfortable text size */
+  line-height: 1.6; /* Improve readability with proper line spacing */
+  color: #333; /* Dark grey for easy reading */
+  margin: 20px 0; /* Add vertical spacing between paragraphs */
+  text-align: justify; /* Align text for a clean block layout */
+}
+
+/* Optional Styling for Emphasis */
+p.important {
+  font-weight: bold; /* Highlight important text */
+  color: #007bff; /* Use blue to emphasize */
+}
+
+p.note {
+  font-style: italic; /* Use italic for notes or asides */
+  color: #555; /* Slightly lighter grey for notes */
+  background-color: #f9f9f9; /* Subtle background for emphasis */
+  padding: 10px; /* Add spacing inside the note */
+  border-left: 4px solid #007bff; /* Decorative border */
+}
+
+
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Toggle Button Styling */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .important {
+  color: #ffa500; /* Change important text color in dark mode */
+}
+
+
+/* Header Bar Styling */
+nav.head.nav.bar {
+  background-color: #555555;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Label Styling */
+.container label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Input and Select Styling */
+.container input[type="text"],
+.container select,
+.container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Submit Button Styling */
+.container input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Header Styling */
+h2 {
+  text-align: center;
+  color: cadetblue;
+}
+
+/* General UL Styling */
+.catalogue-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.catalogue-list li {
+  margin: 0;
+}
+
+.catalogue-list a {
+  text-decoration: none; /* Remove underline from links */
+  color: #007bff; /* Link color */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Bold text for visibility */
+  padding: 10px 20px; /* Add padding for a button-like appearance */
+  border: 2px solid #007bff; /* Border with the same color as the text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth hover effect */
+}
+
+.catalogue-list a:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: #fff; /* Change text color on hover */
+  border-color: #0056b3; /* Darker border on hover */
+}
+
+
+
+nav.head.nav.bar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav.head.nav.bar a:hover {
+  background-color: #0056b3;
+}
+
+/* Image Styling */
+.bearingimages {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+/* Footer Styling */
+footer.footer.container {
+  background-color: #555555;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}

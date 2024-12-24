@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogues</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    body {background-color: #cccccc}
+    h1 {color: aqua}
+    p {color: darkcyan}
+  </style>
+
+</head>
+
+<body>
+
+<button id="themeToggle" class="theme-toggle">Dark/Light Mode</button>
+<script>
+  const themeToggleButton = document.getElementById("themeToggle");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      themeToggleButton.textContent = "Dark/Light Mode";
+    }
+  });
+
+  themeToggleButton.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+    themeToggleButton.textContent = isDarkMode ? "Dark/Light Mode" : "Dark/Light Mode";
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  });
+</script>
+
+<p class="important">Catalogues</p>
+<script src="js/app.js"></script>
+
+<nav class="head nav bar">
+  <a href="index.html" class="head bar item">Home</a>
+  <a href="catalogues.html" class="head bar item">Catalogues</a>
+  <a href="contact.html" class="head bar item">Contact</a>
+</nav>
+
+<h2> Bearing Catalogues</h2>
+
+<ul class="catalogue-list">
+  <li><a href="https://cdn.skfmediahub.skf.com/api/public/0901d196807026e8/pdf_preview_medium/0901d196807026e8_pdf_preview_medium.pdf" target="contentFrame">SKF</a></li>
+  <li><a href="https://www.imdepa.com.br/wp-content/uploads/2023/02/SCHAEFFLER-PDF-Catalogo-INA-FAG.pdf" target="contentFrame">FAG</a></li>
+  <li><a href="https://www.ntnglobal.com/en/products/catalog/pdf/2203E.pdf" target="contentFrame">NTN</a></li>
+  <li><a href="https://www.timken.com/wp-content/uploads/2016/10/Timken-Tapered-Roller-Bearing-Catalog.pdf" target="contentFrame">Timken</a></li>
+</ul>
+
+
+<div style="border: 1px solid #ccc; margin-top: 20px; height: 600px;">
+  <iframe name="contentFrame" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+</div>
+
+<footer class="footer container">
+  <p class="medium">
+    Powered by <a href="www.mycatalogues.com" target="_blank">Antonio's</a>
+  </p>
+</footer>
+
+</body>
+</html>
+
+
+</html>
